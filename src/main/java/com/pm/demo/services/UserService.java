@@ -1,7 +1,5 @@
 package com.pm.demo.services;
 
-package com.pm.demo.services;
-
 import java.util.List;
 
 import org.springframework.stereotype.Service;
