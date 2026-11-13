@@ -32,4 +32,9 @@ public class InstructorServiceImp implements InstructorService {
         // Guardar el instructor en la base de datos
         instructorRepository.save(instructor);
     }
+
+    @Override
+    public Instructor findByEmail(String email) {
+        return instructorRepository.findByEmail(email);
+    }
 }

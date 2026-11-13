@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+import ar.edu.unnoba.mp2026.courses.util.JwtTokenUtil;
 import ar.edu.unnoba.mp2026.courses.util.PasswordEncoder;
 
 @SpringBootApplication(scanBasePackages = {"com.pm.demo", "ar.edu.unnoba.mp2026.courses"})
@@ -26,5 +27,10 @@ public class DemoApplication {
 	@Bean
 	public ModelMapper modelMapper() {
 		return new ModelMapper();
+	}
+
+	@Bean
+	public JwtTokenUtil jwtTokenUtil() {
+		return new JwtTokenUtil();
 	}
 }
